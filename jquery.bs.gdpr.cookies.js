@@ -6,6 +6,7 @@
  * Copyright (c) 2018 Aleksander Woźnica
  * Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.php
  * Inspired by: https://github.com/ketanmistry/ihavecookies
+ * Cookies Create/Read/Delete from https://www.quirksmode.org/js/cookies.html
  */
 
 (function($) {
