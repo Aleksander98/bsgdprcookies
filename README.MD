@@ -3,7 +3,9 @@ A jQuery based plugin that shows bootstrap modal with cookie info. It is GDPR/RO
 
 You can choose between two options:
 * Simple (message with accept button)
+![simple_screenshot](https://user-images.githubusercontent.com/33174446/43984662-3e155618-9d02-11e8-8e89-288c3fb27779.png)
 * Advanced (message, customize and accept button)
+![advanced_screenshot](https://user-images.githubusercontent.com/33174446/43984678-4c82dfe0-9d02-11e8-8330-979f46bbd00c.png)
 
 ## Usage
 1. Include Bootstrap 
