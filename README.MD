@@ -6,3 +6,6 @@ You can choose between two options:
 * Advanced (message, customize and accept button)
 
 ## Usage
+1. Include Bootstrap 
+> Here is how to do this https://getbootstrap.com/docs/4.1/getting-started/introduction/
+2.

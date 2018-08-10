@@ -137,12 +137,10 @@
 
                     setTimeout(function(){
                         $('#' + settings.id + '-advanced-btn').trigger('click');
+                        $.each(preferences, function(index, field) {
+                            $('#' + settings.id + '-option-' + field).prop('checked', true);
+                        });
                     }, settings.advancedAutoOpenDelay)
-
-                    $.each(preferences, function(index, field) {
-                        var fieldID = settings.id + '-option-' + field;
-                        $('input#' + fieldID).prop('checked', true);
-                    });
                 }
             }, settings.delay);
 
@@ -174,6 +172,7 @@
             $('body').on('click', '#' + settings.id + '-advanced-btn', function(){
                 // Uncheck all checkboxes except for the disabled ones
                 $('input[name="bsgdpr[]"]:not(:disabled)').attr('data-auto', 'off').prop('checked', false);
+                
                 $('label[name="bsgdpr[]"]').tooltip({offset: '0, 10'});
 
                 // Show advanced checkboxes
