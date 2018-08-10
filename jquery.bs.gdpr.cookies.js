@@ -21,6 +21,7 @@
             id: 'bs-gdpr-cookies-modal',
             class: '',
             title: 'Cookies & Privacy Policy',
+            backdrop: 'static',
             message: 'Your cookie message...',
             messageScrollBar: false,
             messageMaxHeightPercent: 25,
@@ -122,13 +123,13 @@
                 modalBodyStyle = 'style="overflow-y: scroll; max-height: ' + settings.messageMaxHeightPercent + '%"';
             }
 
-            var modal = '<div class="modal fade" id="' + settings.id + '-modal" tabindex="-1" role="dialog" aria-labelledby="' + settings.id + '-modal-title" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="' + settings.id + '-modal-title">' + settings.title + '</h5></div><div id="' + settings.id + '-modal-body" class="modal-body" ' + modalBodyStyle + '>' + modalBody + '</div><div class="modal-footer">' + modalButtons + '</div></div></div></div>';
+            var modal = '<div class="modal fade" id="' + settings.id + '" tabindex="-1" role="dialog" aria-labelledby="' + settings.id + '-title" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="' + settings.id + '-title">' + settings.title + '</h5></div><div id="' + settings.id + '-body" class="modal-body" ' + modalBodyStyle + '>' + modalBody + '</div><div class="modal-footer">' + modalButtons + '</div></div></div></div>';
 
             // Show Modal
             setTimeout(function() {
                 $($element).append(modal);
 
-                $('#' + settings.id).modal({keyboard: false, backdrop: false});
+                $('#' + settings.id).modal({keyboard: false, backdrop: settings.backdrop});
 
                 if (event === 'reinit' && settings.allowAdvancedOptions === true) {
 
@@ -179,7 +180,7 @@
                 // Scroll content to bottom if scrollbar option is active
                 if(settings.messageScrollBar == true) {
                     setTimeout(function() {
-                        bodyID = settings.id + '-modal-body';
+                        bodyID = settings.id + '-body';
                         var div = document.getElementById(bodyID);
                         $('#' + bodyID).animate({
                             scrollTop: div.scrollHeight - div.clientHeight
