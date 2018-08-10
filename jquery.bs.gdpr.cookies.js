@@ -28,8 +28,8 @@
             messageMaxHeightPercent: 25,
             delay: 1500,
             expireDays: 30,
-            moreLinkLabel: 'More informations..',
             moreLinkActive: true,
+            moreLinkLabel: 'More informations..',
             moreLinkNewTab: true,
             moreLink: 'privacy-policy.php',
             acceptButtonLabel: 'Accept',
@@ -125,7 +125,7 @@
                 modalBodyStyle = 'style="overflow-y: scroll; max-height: ' + settings.messageMaxHeightPercent + '%"';
             }
 
-            var modal = '<div class="modal fade" id="' + settings.id + '" tabindex="-1" role="dialog" aria-labelledby="' + settings.id + '-title" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="' + settings.id + '-title">' + settings.title + '</h5></div><div id="' + settings.id + '-body" class="modal-body" ' + modalBodyStyle + '>' + modalBody + '</div><div class="modal-footer">' + modalButtons + '</div></div></div></div>';
+            var modal = '<div class="modal fade ' + settings.class + '" id="' + settings.id + '" tabindex="-1" role="dialog" aria-labelledby="' + settings.id + '-title" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="' + settings.id + '-title">' + settings.title + '</h5></div><div id="' + settings.id + '-body" class="modal-body" ' + modalBodyStyle + '>' + modalBody + '</div><div class="modal-footer">' + modalButtons + '</div></div></div></div>';
 
             // Show Modal
             setTimeout(function() {
