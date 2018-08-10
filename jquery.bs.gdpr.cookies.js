@@ -34,6 +34,7 @@
             acceptButtonLabel: 'Accept',
             allowAdvancedOptions: false,
             advancedTitle: 'Select which cookies you want to accept',
+            advancedAutoOpenDelay: 1000,
             advancedButtonLabel: 'Customize',
             advancedCookiesToSelect: [
                 {
@@ -111,7 +112,7 @@
                     }
                 });
 
-                modalBody = '<div id="' + settings.id + '-message">' + settings.message + moreLink + '</div>' + '<div id="' + settings.id + '-advanced-types" style="display:none;"><h5 id="' + settings.id + '-advanced-title">' + settings.advancedTitle + '</h5>' + advancedCookiesToSelectList + '</div>';
+                modalBody = '<div id="' + settings.id + '-message">' + settings.message + moreLink + '</div>' + '<div id="' + settings.id + '-advanced-types" style="display:none; margin-top: 10px;"><h5 id="' + settings.id + '-advanced-title">' + settings.advancedTitle + '</h5>' + advancedCookiesToSelectList + '</div>';
             }
             else {
                 modalButtons = '<button id="' + settings.id + '-accept-btn" type="button" class="btn btn-primary" data-dismiss="modal">' + settings.acceptButtonLabel + '</button>';
@@ -133,7 +134,9 @@
 
                 if (event === 'reinit' && settings.allowAdvancedOptions === true) {
 
-                    $('#' + settings.id + '-advanced-btn').trigger('click');
+                    setTimeout(function(){
+                        $('#' + settings.id + '-advanced-btn').trigger('click');
+                    }, settings.advancedAutoOpenDelay)
 
                     $.each(preferences, function(index, field) {
                         var fieldID = settings.id + '-option-' + field;
