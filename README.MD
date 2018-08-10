@@ -119,6 +119,7 @@ advancedCookiesToSelect: [
 ## Methods
 
 `$.fn.bsgdprcookies.GetUserPreferences` - returns user preferences saved in cookie
+
 `$.fn.bsgdprcookies.PreferenceExists` - check if user preference exists in cookie (returns true/false)
 
 ## Styling
