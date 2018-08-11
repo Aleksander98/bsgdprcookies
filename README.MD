@@ -76,7 +76,7 @@ allowAdvancedOptions | false | Activate advanced options (customize button)
 advancedTitle | 'Select which cookies you want to accept' | Text above advanced options checkboxes
 advancedAutoOpenDelay | 1000 | Time (in ms) to automatically show customize options (when "reinit" is set)
 advancedButtonLabel | 'Customize' | Customize button text
-OnAccept | function() {} || Specify what to do after acceptance
+OnAccept | function() {} | Specify what to do after acceptance
 advancedCookiesToSelect | | see below
 
 ## How to set custom cookies to select (__advancedCookiesToSelect__)
