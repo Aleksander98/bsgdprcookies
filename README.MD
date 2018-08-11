@@ -1,9 +1,15 @@
 # bsgdprcookies by Aleksander Woźnica
 A jQuery based plugin that shows bootstrap modal with cookie info. It is GDPR/RODO compatible. The plugin shows the message on the users first visit and then every 30 days (by default). 
 
+Here is a demo page hosted by [jqueryscript.net](https://www.jqueryscript.net/demo/GDPR-Cookie-Consent-Bootstrap-4-bsgdprcookies/)
+
 You can choose between two options:
 * Simple (message with accept button)
+
+![simple_screenshot](https://user-images.githubusercontent.com/33174446/43984662-3e155618-9d02-11e8-8e89-288c3fb27779.png)
 * Advanced (message, customize and accept button)
+
+![advanced_screenshot](https://user-images.githubusercontent.com/33174446/43984678-4c82dfe0-9d02-11e8-8330-979f46bbd00c.png)
 
 ## Usage
 1. Include Bootstrap 
@@ -70,7 +76,7 @@ allowAdvancedOptions | false | Activate advanced options (customize button)
 advancedTitle | 'Select which cookies you want to accept' | Text above advanced options checkboxes
 advancedAutoOpenDelay | 1000 | Time (in ms) to automatically show customize options (when "reinit" is set)
 advancedButtonLabel | 'Customize' | Customize button text
-OnAccept | function() {} || Specify what to do after acceptance
+OnAccept | function() {} | Specify what to do after acceptance
 advancedCookiesToSelect | | see below
 
 ## How to set custom cookies to select (__advancedCookiesToSelect__)
@@ -115,6 +121,7 @@ advancedCookiesToSelect: [
 ## Methods
 
 `$.fn.bsgdprcookies.GetUserPreferences` - returns user preferences saved in cookie
+
 `$.fn.bsgdprcookies.PreferenceExists` - check if user preference exists in cookie (returns true/false)
 
 ## Styling
